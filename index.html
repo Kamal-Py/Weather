@@ -1,0 +1,162 @@
+<!--
+    Student Name: Kamal Dhital
+    Student ID: 2407046 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Section -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the document -->
+    <title>Weather Forecast</title>
+
+    <!-- Linking CSS File -->
+    <link href="Kamal_Dhital_2407046.css" rel="stylesheet">
+
+    <!-- Adding External Sources for icon -->
+    <script src="https://kit.fontawesome.com/654a917f30.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<!-- Body Section -->
+
+<body id="mainBody">
+    <!-- Wrapper-->
+    <div id="wrapper">
+        <div id="left">
+            <!-- Left Section -->
+            <form>
+                <!-- Search Bar Section -->
+                <div id="search" class="left-content">
+                    <!-- Icon -->
+                    <label for="searchInput">
+                        <div id="searchIcon" class="material-symbols-outlined" style="padding-top: 8px;">
+                            travel_explore
+                        </div>
+                    </label>
+                    <!-- Search Bar -->
+                    <div id="searchBar">
+                        <input type="search" id="searchInput" placeholder="Enter City Name: " name="city">
+                    </div>
+                    <!-- Search Button -->
+                    <div id="searchBTN">
+                        <button type="Submit" id="searchButton">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div id="mainInformation" class="left-content">
+                <!-- Forecast Info like Weather Detail and Icon, Temperature, City, and Date and Time-->
+                <div class="forecast-info">
+                    <div id="weatherIcon"></div>
+                    <div id="temperature"></div>
+                    <div id="weatherCondition"></div>
+                    <div id="city"></div>
+                    <div id="dateAndTime"></div>
+                </div>
+            </div>
+
+            <!-- Pressure, Humidity, and Wind Speed Wrapper-->
+            <div id="detailWrapper">
+                <!-- It feels like -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fa-solid fa-temperature-half"></i>&nbsp;&nbsp;</figure>
+                        <p>It Feels Like</p>
+                    </div>
+                    <div id="itFeelsLike" class="fetch-data"></div>
+                </div>
+
+                <!-- Weather Description -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;</figure>
+                        <p>Weather Description</p>
+                    </div>
+                    <div id="weatherDescription" class="fetch-data"></div>
+                </div>
+
+                <!-- Pressure -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;</figure>
+                        <p>Pressure</p>
+                    </div>
+                    <div id="pressure" class="fetch-data"></div>
+                </div>
+
+                <!-- Wind Speed -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fas fa-wind"></i>&nbsp;&nbsp;</figure>
+                        <p>Wind Speed</p>
+                    </div>
+                    <div id="windSpeed" class="fetch-data"></div>
+                </div>
+
+                <!-- Humidity -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fa-solid fa-droplet"></i>&nbsp;&nbsp;</figure>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="humidity" class="fetch-data"></div>
+                </div>
+
+                <!-- Visibility -->
+                <div class="detail-wrapper-data">
+                    <div class="icon-and-title">
+                        <figure><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;</figure>
+                        <p>Visibility</p>
+                    </div>
+                    <div id="visibility" class="fetch-data"></div>
+                </div>
+            </div>
+
+            <div id="pastDataContainer">
+                <table id="weatherTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temp</th>
+                            <th>Desc</th>
+                            <th>Feels Like</th>
+                            <th>Pressure</th>
+                            <th>Wind Speed</th>
+                            <th>Humidity</th>
+                            <th>Visibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here dynamically using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Copyright Section -->
+            <div id="copyright">
+                <p>Copyright &copy; Kamal Dhital (2407046), 2024</p>
+            </div>
+        </div>
+        <!-- End of Left Wrapper -->
+    </div>
+
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display: none;">
+        <div id="loadingLogo">
+            <img src="Server Data Loading.gif" alt="Loading...">
+        </div>
+    </div>
+    <!-- End of Right Wrapper -->
+
+    <!-- Linking JavaScript file -->
+    <script src="Kamal_Dhital_2407046.js"></script>
+</body>
+
+</html>

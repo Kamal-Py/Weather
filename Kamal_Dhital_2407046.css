@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  color: white;
+  background-size: cover;
+}
+/* Wrapper */
+#wrapper {
+  margin: auto;
+  overflow-x: hidden;
+}
+
+/* Search Bar Section */
+#search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  margin: 10px auto;
+  width: fit-content;
+  border-radius: 50px;
+  border-bottom: 5px solid black;
+  background-color: rgba(39, 39, 39, 0.6);
+}
+
+/* Input Field */
+#searchInput {
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 10px 0;
+  color: white;
+  border-bottom: 2px solid black;
+  width: 100%; /* Adjust width as needed */
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Search Button */
+#searchButton {
+  background-color: gray;
+  border-radius: 50px;
+  padding: 8px;
+  font-size: 18px;
+  border-bottom: 5px solid black;
+  cursor: pointer;
+}
+
+
+#searchButton:hover {
+  background-color: aqua;
+}
+
+/* Main Information Section */
+#mainInformation {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 36px;
+}
+
+/* Detail Wrapper Section */
+#detailWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 8px;
+  gap: 20px;
+  background-color: rgba(39, 39, 39, 0.4);
+}
+
+/* Detail Wrapper Data */
+.detail-wrapper-data {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgba(39, 39, 39, 0.8);
+  margin: 4px;
+  /* padding: 8px; */
+  border-radius: 25px;
+}
+
+/* Icon and Title within Detail Wrapper Data */
+.icon-and-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual Icons within Icon and Title */
+.icon-and-title figure {
+  margin-right: 2px;
+}
+
+.fetch-data {
+  padding: 10px;
+  font-size: 24px;
+}
+
+/* Scrolling Table Section */
+#pastDataContainer {
+  overflow-x: auto;
+  width: 100%;
+}
+
+#weatherTable {
+  width: 100%;
+  /* border-collapse: collapse; */
+  text-align: center;
+}
+
+#weatherTable th,
+#weatherTable td {
+  padding: 10px;
+  border: 2px solid black;
+  background-color: rgba(39, 39, 39, 0.4);
+}
+/* Style for loading overlay */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#loadingLogo img {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Copyright Section */
+#copyright {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (min-width: 1366px) {
+  body {
+    overflow: hidden;
+  }
+
+  #search {
+    background-color: rgba(39, 39, 39, 0.2);
+  }
+
+  #wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  #left {
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(39, 39, 39, 0.6);
+  }
+
+  #mainInformation {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  #detailWrapper {
+    margin: 2px;
+  }
+  .detail-wrapper-data {
+    width: 30%;
+    height: 110px;
+    margin: auto;
+    font-size: 14px;
+  }
+  .icon-and-title figure {
+    margin-left: 15px;
+  }
+
+  .fetch-data {
+    font-size: 18px;
+  }
+
+  table {
+      padding:10px;
+    font-size: 10px;
+    margin: auto;
+  }
+
+  #copyright {
+    position: fixed;
+    bottom: -20px;
+    width: 39%;
+    text-align: center;
+  }
+}
